@@ -1,0 +1,595 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #f8f9fb;
+
+    color: #1f2937;
+
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background: white;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+
+.logo {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: #333;
+
+    font-weight: 500;
+
+}
+
+
+.nav-links a:hover {
+
+    color: #d62828;
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 70px 8%;
+
+}
+
+
+.hero-content {
+
+    max-width: 650px;
+
+}
+
+
+.tagline {
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero h1 {
+
+    font-size: 56px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+}
+
+
+.description {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #666;
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    padding: 14px 24px;
+
+    border-radius: 8px;
+
+}
+
+
+.primary-btn {
+
+    color: white;
+
+    background: #d62828;
+
+}
+
+
+.secondary-btn {
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+}
+
+
+.primary-btn:hover {
+
+    opacity: 0.9;
+
+}
+
+
+.secondary-btn:hover {
+
+    background: #f2f2f2;
+
+}
+
+
+/* ================= BLOOD CARD ================= */
+
+.blood-card {
+
+    width: 330px;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+
+    text-align: center;
+
+}
+
+
+.blood-icon {
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.blood-card h2 {
+
+    margin-bottom: 15px;
+
+}
+
+
+.blood-card p {
+
+    color: #666;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+
+}
+
+
+.blood-card button {
+
+    width: 100%;
+
+    background: #111827;
+
+    color: white;
+
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+
+    padding: 80px 8%;
+
+    background: white;
+
+    text-align: center;
+
+}
+
+
+.features h2 {
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.section-description {
+
+    color: #666;
+
+    margin-bottom: 50px;
+
+}
+
+
+.feature-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+
+.feature {
+
+    padding: 30px;
+
+    border: 1px solid #eee;
+
+    border-radius: 12px;
+
+    text-align: left;
+
+}
+
+
+.feature-number {
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+}
+
+
+.feature h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.feature p {
+
+    color: #666;
+
+    line-height: 1.6;
+
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+
+    padding: 80px 8%;
+
+    text-align: center;
+
+}
+
+
+.about h2 {
+
+    font-size: 36px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.about p {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    color: #666;
+
+    line-height: 1.8;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #111827;
+
+    color: white;
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        padding: 18px 5%;
+
+    }
+
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        flex-direction: column;
+
+        padding: 50px 5%;
+
+        text-align: center;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+
+    }
+
+
+    .blood-card {
+
+        width: 100%;
+
+        max-width: 380px;
+
+    }
+
+
+    .feature-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .features,
+    .about {
+
+        padding: 60px 5%;
+
+    }
+
+}
+/* ================= CAMERA PAGE ================= */
+
+.scan-page {
+
+    min-height: 80vh;
+
+    padding: 60px 5%;
+
+    text-align: center;
+
+}
+
+
+.scan-page h1 {
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.scan-page > p {
+
+    color: #666;
+
+    margin-bottom: 30px;
+
+}
+
+
+.camera-container {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    background: #111;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+}
+
+
+#video {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+}
+
+
+#canvas {
+
+    display: none;
+
+}
+
+
+.camera-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+#startCamera {
+
+    background: #d62828;
+
+    color: white;
+
+}
+
+
+#captureButton {
+
+    background: #111827;
+
+    color: white;
+
+}
+
+
+#cameraMessage {
+
+    margin-top: 20px;
+
+    font-weight: 600;
+
+}
+
+
+@media (max-width: 600px) {
+
+    .scan-page {
+
+        padding: 40px 5%;
+
+    }
+
+
+    .scan-page h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .camera-buttons button {
+
+        width: 100%;
+
+        max-width: 350px;
+
+    }
+
+}

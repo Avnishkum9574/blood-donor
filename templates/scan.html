@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Scan Face - BloodConnect</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🩸 BloodConnect
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/register">Register</a>
+        </div>
+
+    </nav>
+
+
+    <main class="scan-page">
+
+        <h1>Scan Your Face</h1>
+
+        <p>
+            Allow camera access and position your face
+            inside the frame.
+        </p>
+
+        <div class="camera-container">
+
+            <video id="video"
+                   autoplay
+                   playsinline>
+            </video>
+
+            <canvas id="canvas"></canvas>
+
+        </div>
+
+        <div class="camera-buttons">
+
+            <button id="startCamera">
+                📷 Start Camera
+            </button>
+
+            <button id="captureButton">
+                Capture Face
+            </button>
+
+        </div>
+
+        <p id="cameraMessage"></p>
+        <div id="donorResult"></div>
+
+    <script src="{{ url_for('static', filename='js/camera.js') }}"></script>
+
+</body>
+</html>
+
+    
+
+
+   

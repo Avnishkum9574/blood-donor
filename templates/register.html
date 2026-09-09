@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Register Donor - BloodConnect</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🩸 BloodConnect
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/scan">Scan Face</a>
+        </div>
+
+    </nav>
+
+
+    <main class="scan-page">
+
+        <h1>Register as a Donor</h1>
+
+        <p>
+            Enter your verified information.face photo is optinal.
+        </p>
+
+
+        <form id="registerForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Full Name"
+                required
+            >
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Phone Number"
+                required
+            >
+
+
+            <select id="blood_group" required>
+
+                <option value="">
+                    Select Blood Group
+                </option>
+
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+
+            </select>
+
+
+            <div class="camera-container">
+
+                <video
+                    id="video"
+                    autoplay
+                    playsinline>
+                </video>
+
+                <canvas id="canvas"></canvas>
+
+            </div>
+
+
+            <div class="camera-buttons">
+
+                <button
+                    type="button"
+                    id="startCamera">
+                    📷 Start Camera
+                </button>
+
+                <button
+                    type="button"
+                    id="captureButton">
+                    Capture Face
+                </button>
+
+            </div>
+
+
+            <button
+                type="submit"
+                id="registerButton">
+                Register Donor
+            </button>
+
+
+            <p id="cameraMessage"></p>
+
+        </form>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='js/register.js') }}?v=2">
+    </script>
+
+</body>
+
+</html>

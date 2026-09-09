@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>BloodConnect</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🩸 BloodConnect
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/register">Register</a>
+            <a href="#about">About</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="tagline">
+                SMART BLOOD DONOR SYSTEM
+            </p>
+
+            <h1>
+                Find the right blood.
+                <span>Save a life.</span>
+            </h1>
+
+            <p class="description">
+                Identify registered blood donors using secure
+                face recognition and quickly access their
+                verified blood-group information.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="/register">
+                    <button class="primary-btn">
+                        Register as Donor
+                    </button>
+                </a>
+                   <a href="/scan">
+    <button class="secondary-btn">
+        📷 Scan Face
+    </button>
+</a>
+                                
+
+            </div>
+
+        </div>
+
+
+        <!-- Blood Card -->
+        <div class="blood-card">
+
+            <div class="blood-icon">
+                🩸
+            </div>
+
+            <h2>Emergency Blood Search</h2>
+
+            <p>
+                Quickly find registered donors
+                when blood is urgently required.
+            </p>
+
+           <button onclick="window.location.href='/search'">
+    Find Blood Donor →
+</button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="features">
+
+        <h2>How It Works</h2>
+
+        <p class="section-description">
+            A simple three-step donor identification process.
+        </p>
+
+
+        <div class="feature-container">
+
+            <div class="feature">
+
+                <div class="feature-number">
+                    01
+                </div>
+
+                <h3>Register</h3>
+
+                <p>
+                    Donor registers their personal information
+                    and verified blood group.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-number">
+                    02
+                </div>
+
+                <h3>Scan Face</h3>
+
+                <p>
+                    Use a phone or laptop camera to identify
+                    the registered donor.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-number">
+                    03
+                </div>
+
+                <h3>Get Information</h3>
+
+                <p>
+                    The system retrieves the donor's
+                    verified blood-group information.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="about">
+
+        <h2>About BloodConnect</h2>
+
+        <p>
+            BloodConnect is a web-based blood donor
+            identification and management system.
+            Face recognition is used only to identify
+            registered donors. Blood-group information
+            is retrieved from the database.
+        </p>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 BloodConnect | Smart Blood Donor System
+        </p>
+
+    </footer>
+
+
+<script>
+
+function scanFace() {
+
+    alert(
+        "Camera and face recognition will be added in the next step."
+    );
+
+}
+function bloodSearch() {
+    window.location.href = "/search";
+}
+
+            let result = "Available Donors:\n\n";
+
+            data.donors.forEach((donor, index) => {
+                result +=
+                    (index + 1) + ". " +
+                    donor.name +
+                    "\nPhone: " +
+                    donor.phone +
+                    "\nBlood Group: " +
+                    donor.blood_group +
+                    "\n\n";
+            });
+
+            alert(result);
+        })
+        .catch(error => {
+            console.error("Search error:", error);
+            alert("Error while searching donors.");
+        });
+}
+
+
+</script>
+
+</body>
+
+</html>
